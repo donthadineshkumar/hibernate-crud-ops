@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 24 Jun, 2015 3:58:11 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.entity.Student" table="Student">
+    <!--(usage) caching strategy : transactional, read-write, nonstrict-read-write
+    	read-only 
+    	region(optional defaults to the class or collection
+    	role name): specifies the name of the second level cache region
+    	include(optional- defaults to all) = "all | non-lazy"
+    	non-lazy: specifies that properties of the entity mapped with lazy="true"
+    	cannot be cached when attr-level lazy fetching is enabled.
+    	 -->
+    	<!-- <cache usage="read-only"/> -->
+    	
+        <id name="id" type="java.lang.Integer">
+            <column name="ID" />
+            <generator class="assigned" />
+        </id>
+        <property  name="name" type="java.lang.String">
+            <column  name="NAME" />
+        </property>
+        <property name="email" type="java.lang.String" >
+            <column name="EMAIL"  />
+        </property>      	
+    </class>
+</hibernate-mapping>
